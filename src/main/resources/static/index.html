@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <title>Block Chain Console</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="getAllNodes()">
+<script src="js/display.js"></script>
+<script src="js/restClient.js"></script>
+<h1>Block Chain Demo</h1>
+<hr>
+
+<p>
+    <button type="button" class="button" id="addNode" onclick="createNode()">New Node</button>
+    <button type="button" id="getAll" onclick="getAllNodes()" class="button">Refresh All</button>
+    <button type="button" class="button" id="delAllNodes" onclick="deleteAllNodes()">Delete All Nodes</button>
+    <button type="button" class="button" id="startMine" onclick="myVar = setInterval(Miner, 10000)">startMining</button>
+    <button type="button" class="button" id="stopMine" onclick="clearInterval(myVar)">stopMining</button>
+</p>
+
+<hr>
+<p id="msg" class="msg">
+    Empty.
+</p>
+
+<table id="output">
+</table>
+
+</body>
+</html>
